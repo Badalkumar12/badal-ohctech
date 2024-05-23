@@ -21,7 +21,7 @@ import ExcelJS from 'exceljs';
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
 
-const AilmentTimingList = () => {
+const AilmentSystemList = () => {
 
     const [rowData, setRowData] = useState([]);
 
@@ -217,7 +217,7 @@ const AilmentTimingList = () => {
               styles: { fontSize: 5 },
               columnStyles: { 0: { cellWidth: 'auto' }, 1: { cellWidth: 'auto' } }
           });
-            doc.save("AilmentTimingList.pdf");
+            doc.save("AilmentSystemList.pdf");
         };
     
     
@@ -264,7 +264,7 @@ const AilmentTimingList = () => {
                 const url = window.URL.createObjectURL(blob);
                 const anchor = document.createElement('a');
                 anchor.href = url;
-                anchor.download = 'AilmentTimingList.xlsx';
+                anchor.download = 'AilmentSystemList.xlsx';
                 anchor.click();
                 // anchor.URL.revokeObjectURL(url);
             })
@@ -306,4 +306,4 @@ const AilmentTimingList = () => {
     );
 };
 
-export default AilmentTimingList;
+export default AilmentSystemList;

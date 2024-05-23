@@ -1,16 +1,12 @@
 import Ohclogo from "./Ohclogo";
-import { FormControl, Grid, TextField } from "@mui/material";
+import { FormControl, Grid} from "@mui/material";
 import PropTypes from "prop-types";
 import Input from "../common/Input";
-import SingleSelect from "../common/SingleSelect"
-import MultipleSelect from "../common/MultipleSelect";
 import { InputLabel, MenuItem, Select } from "@mui/material";
-import Autocomplete from "@mui/material/Autocomplete";
-import { useState } from "react";
-import MultiCheckbox from "./MultiCheckbox";
 
 
-const RefferedByForm = ({
+
+const VaccineForm = ({
   values,
   touched,
   handleBlur,
@@ -19,7 +15,7 @@ const RefferedByForm = ({
   setFieldValue,
   handleSubmit,
 }) => {
-    RefferedByForm.propTypes = {
+    VaccineForm.propTypes = {
     values: PropTypes.object.isRequired,
     touched: PropTypes.object.isRequired,
     errors: PropTypes.object.isRequired,
@@ -30,8 +26,8 @@ const RefferedByForm = ({
   };
 
 
-  const Medselect = ["Active", "Not Active"];
-  const isDefault = ["Yes", "No"];
+//   const Medselect = ["Active", "Not Active"];
+//   const isDefault = ["Yes", "No"];
 
 
 
@@ -42,52 +38,51 @@ const RefferedByForm = ({
           <Grid item xs={12}  justifyContent="center" alignItems="center">
             <FormControl fullWidth>
               <Grid container spacing={2} justifyContent="center" alignItems="center">
-                <Grid item xs={12}  container spacing={1} justifyContent="center" alignItems="center">
-                  <Input
-                    label="Reffered By"
-                    name="referredBy"
+              <Grid item xs={12}  container spacing={1} justifyContent="center" alignItems="center">
+                <Input
+                    label="Vaccine Name"
+                    name="VaccineName"
                     type="text"
                     size="large"
-                    value={values.referredBy}
+                    value={values.VaccineName}
                     onChange={handleChange}
                     onBlur={handleBlur}
                     helperText={
-                      errors.referredBy && touched.referredBy? (
-                        <span style={{ color: "red" }}>{errors.referredBy}</span>
+                      errors.VaccineName && touched.VaccineName? (
+                        <span style={{ color: "red" }}>{errors.VaccineName}</span>
                       ) : null
                     }
                   />
                 </Grid>
                 <Grid item xs={12}  container spacing={1} justifyContent="center" alignItems="center">
-                  <Input
-                    label="Enter Description"
-                    name="description"
+                <Input
+                    label="Company Name"
+                    name="CompanyName"
                     type="text"
                     size="large"
-                    value={values.description}
+                    value={values.CompanyName}
                     onChange={handleChange}
                     onBlur={handleBlur}
                     helperText={
-                      errors.description && touched.description? (
-                        <span style={{ color: "red" }}>
-                          {errors.description}
-                        </span>
+                      errors.CompanyName && touched.CompanyName? (
+                        <span style={{ color: "red" }}>{errors.CompanyName}</span>
                       ) : null
                     }
                   />
                 </Grid>
+
                 <Grid item xs={12}  container spacing={1} justifyContent="center" alignItems="center">
-                  <Input
-                    label="Enter Remarks"
-                    name="remarks"
+                <Input
+                    label="Vaccine Description"
+                    name="VaccineDesc"
                     type="text"
                     size="large"
-                    value={values.remarks}
+                    value={values.VaccineDesc}
                     onChange={handleChange}
                     onBlur={handleBlur}
                     helperText={
-                      errors.remarks && touched.remarks ? (
-                        <span style={{ color: "red" }}>{errors.remarks}</span>
+                      errors.VaccineDesc && touched.VaccineDesc? (
+                        <span style={{ color: "red" }}>{errors.VaccineDesc}</span>
                       ) : null
                     }
                   />
@@ -102,4 +97,4 @@ const RefferedByForm = ({
 };
 
 
-export default RefferedByForm;
+export default VaccineForm;

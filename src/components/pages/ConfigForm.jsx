@@ -1,4 +1,3 @@
-import Ohclogo from "./Ohclogo";
 import { FormControl, Grid, TextField } from "@mui/material";
 import PropTypes from "prop-types";
 import Input from "../common/Input";
@@ -8,9 +7,8 @@ import { InputLabel, MenuItem, Select } from "@mui/material";
 import Autocomplete from "@mui/material/Autocomplete";
 import { useState } from "react";
 import MultiCheckbox from "./MultiCheckbox";
-
-
-const RefferedByForm = ({
+//import Select from "@mui/material";
+const ConfigForm = ({
   values,
   touched,
   handleBlur,
@@ -19,7 +17,7 @@ const RefferedByForm = ({
   setFieldValue,
   handleSubmit,
 }) => {
-    RefferedByForm.propTypes = {
+    ConfigForm.propTypes = {
     values: PropTypes.object.isRequired,
     touched: PropTypes.object.isRequired,
     errors: PropTypes.object.isRequired,
@@ -29,65 +27,46 @@ const RefferedByForm = ({
     handleSubmit: PropTypes.func.isRequired,
   };
 
-
-  const Medselect = ["Active", "Not Active"];
-  const isDefault = ["Yes", "No"];
-
-
-
+  //const ohcselect = ["Student", "Employee"];
+ // const adroute=["ICU","Personal Clinic","Government Hospital"];
+  //const dename=["AED","Blood Pressure Monitors","Nebulizers","Oxygen canisters"];
+ 
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
       <form onSubmit={handleSubmit}>
-        <Grid container spacing={2} justifyContent="center" alignItems="center" sx={{width:400}} >
+        <Grid container spacing={2} justifyContent="center" alignItems="center" sx={{width:300}}>
+
           <Grid item xs={12}  justifyContent="center" alignItems="center">
             <FormControl fullWidth>
               <Grid container spacing={2} justifyContent="center" alignItems="center">
                 <Grid item xs={12}  container spacing={1} justifyContent="center" alignItems="center">
-                  <Input
-                    label="Reffered By"
-                    name="referredBy"
+                <Input
+                    label="Enter key  Name"
+                    name="keyname"
                     type="text"
                     size="large"
-                    value={values.referredBy}
+                    value={values.keyname}
                     onChange={handleChange}
                     onBlur={handleBlur}
                     helperText={
-                      errors.referredBy && touched.referredBy? (
-                        <span style={{ color: "red" }}>{errors.referredBy}</span>
+                      errors.keyname && touched.keyname? (
+                        <span style={{ color: "red" }}>{errors.keyname}</span>
                       ) : null
                     }
                   />
                 </Grid>
                 <Grid item xs={12}  container spacing={1} justifyContent="center" alignItems="center">
-                  <Input
-                    label="Enter Description"
-                    name="description"
+                <Input
+                    label="Enter value"
+                    name="valued"
                     type="text"
                     size="large"
-                    value={values.description}
+                    value={values.valued}
                     onChange={handleChange}
                     onBlur={handleBlur}
                     helperText={
-                      errors.description && touched.description? (
-                        <span style={{ color: "red" }}>
-                          {errors.description}
-                        </span>
-                      ) : null
-                    }
-                  />
-                </Grid>
-                <Grid item xs={12}  container spacing={1} justifyContent="center" alignItems="center">
-                  <Input
-                    label="Enter Remarks"
-                    name="remarks"
-                    type="text"
-                    size="large"
-                    value={values.remarks}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    helperText={
-                      errors.remarks && touched.remarks ? (
-                        <span style={{ color: "red" }}>{errors.remarks}</span>
+                      errors.valued && touched.valued? (
+                        <span style={{ color: "red" }}>{errors.valued}</span>
                       ) : null
                     }
                   />
@@ -101,5 +80,4 @@ const RefferedByForm = ({
   );
 };
 
-
-export default RefferedByForm;
+export default ConfigForm;

@@ -24,7 +24,8 @@ import MedTimingList from "./components/pages/MedTimingList";
 import ComplaintList from "./components/pages/ComplaintList";
 import RefferalPointList from "./components/pages/RefferalPointList";
 import AilmentSystemList from "./components/pages/AilmentSystemList";
-
+import DiagnosisList from "./components/pages/DiagnosisList";
+import RefferedByList from "./components/pages/RefferedByList";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -121,6 +122,14 @@ const router = createBrowserRouter([
               {
                 path : "/AilmentSystemList",
                 element : <AilmentSystemList />
+              },
+              {
+                path : "/DiagnosisList",
+                element : <DiagnosisList />
+              },
+              {
+                path : "/RefferedByList",
+                element : <RefferedByList />
               }
             ],
           },

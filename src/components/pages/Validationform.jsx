@@ -79,9 +79,9 @@ export const AddDocValidationForm = Yup.object({
 
 export const AilmentValidationForm = Yup.object({
   ailmentName: Yup.string().min(2).max(25).required("Please enter ailment Name"),
-  ailmentDescription: Yup.string().min(2).max(25).required("Please enter Description"),
+  ailmentDesc: Yup.string().min(2).max(25).required("Please enter Description"),
   ailmentCode: Yup.string().min(2).max(25).required("Please enter ailment code"),
-  statusType: Yup.string().min(2).max(25).required("Please enter ailment Action"),
+  isActive: Yup.string().min(2).max(25).required("Please enter ailment Action"),
 });
 
 export const RefferalValidationForm = Yup.object({
@@ -175,10 +175,9 @@ export const bodysystemForm = Yup.object({
    BodySystem: Yup.string().required("Please enter Body System"),
 });
 
-
-// export const InjuryClassValidationForm = Yup.object({
-//   Injury_Name: Yup.string().required("Please enter Injury  Name"),
-//   Injury_Description: Yup.string().required("Please Injury   Description"),
-//   Injury_Code: Yup.string().required("Please enter Injury  code"),
-  
-// });
+// RefferalBy form
+export const RefferedByValidationForm = Yup.object({
+  referredBy: Yup.string().required("Please enter Reffered By"),
+  description: Yup.string().required("Please Enter Description"),
+  remarks: Yup.string().required("Please Enter Remarks"),
+});
