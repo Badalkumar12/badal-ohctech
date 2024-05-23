@@ -64,7 +64,6 @@ const RouteAdminList = () => {
 
   const [openPopup, setOpenPopup] = useState(false);
 
-  // to delete a row
 const handleDeleteRow = async (id) => {
   alert(id)
  if(window.confirm('Are you sure you want to delete this data?')){

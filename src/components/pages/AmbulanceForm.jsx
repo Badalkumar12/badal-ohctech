@@ -102,7 +102,6 @@ const AmbulanceForm = ({
               
                 <Grid item   container spacing={1} justifyContent="center" alignItems="center">
                 <SingleSelect
-                  // sx={{ width: "150px" }}
 
                   arr={cardiac}
                   label="Cardiac"

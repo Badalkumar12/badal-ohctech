@@ -322,7 +322,6 @@ const AmbulanceList = () => {
         // ];
   
         const headerStyle = {
-          // font: { bold: true, size: 12 },
           alignment: { horizontal: 'center' }
           
       };
