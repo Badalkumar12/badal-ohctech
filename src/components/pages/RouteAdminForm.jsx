@@ -79,7 +79,6 @@ const RouteAdminForm = ({
                 </Grid>
                 <Grid item   container spacing={1} justifyContent="center" alignItems="center">
                 <Input
-                  // sx={{ width: "150px" }}
                   label="Enter the Remarks"
                   name="remarks"
                   type="text"
