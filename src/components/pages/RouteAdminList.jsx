@@ -241,5 +241,4 @@ const handleUpdate = async (id)=> {
   );
 };
 
-
 export default RouteAdminList;
