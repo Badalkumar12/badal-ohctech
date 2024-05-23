@@ -401,4 +401,5 @@ const AmbulanceList = () => {
     );
 };
 
+
 export default AmbulanceList;
